@@ -18,12 +18,12 @@ form.addEventListener('submit', (event) => {
     }
 	*/
 	if (input1.value && input2.value) {
-        h3.innerText = h3.innerText + '?' + input1.value + '&' + input2.value;
+        h3.innerText = baseUrl + '?' + 'name=' + input1.value + '&year=' + input2.value;
     }
     else if (input1.value) {
-        h3.innerText = h3.innerText + '?' + input1.value;
+        h3.innerText = baseUrl + '?' + 'name=' + input1.value;
     }
-    else if (input2.value) {  // Fixed: should check input2.value here
-        h3.innerText = h3.innerText + '?' + input2.value;
+    else if (input2.value) {  // Fixed incorrect condition
+        h3.innerText = baseUrl + '?' + 'year=' + input2.value;
     }
 });
