@@ -1,12 +1,13 @@
-// your code here
 let input1 = document.getElementById("name");
 let input2 = document.getElementById("year");
 let button = document.getElementById("button");
 let h3 = document.getElementById("url");
 let form = document.getElementById("form");
-form.addEventListener('submit',(event)=>{
-	event.preventDefault();
-	let baseUrl = "https://localhost:8080/";
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();  // Prevent page refresh
+
+    let baseUrl = "https://localhost:8080/";
     let params = [];
 
     if (input1.value) params.push(`name=${encodeURIComponent(input1.value)}`);
@@ -15,4 +16,4 @@ form.addEventListener('submit',(event)=>{
     if (params.length > 0) {
         h3.innerText = baseUrl + "?" + params.join("&");
     }
-})
+});
