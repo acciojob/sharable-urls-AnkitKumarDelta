@@ -6,9 +6,10 @@ let form = document.getElementById("form");
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();  // Prevent page refresh
-/*
+
     let baseUrl = "https://localhost:8080/";
-    let params = [];
+/*
+	let params = [];
 
     if (input1.value) params.push(`name=${encodeURIComponent(input1.value)}`);
     if (input2.value) params.push(`year=${encodeURIComponent(input2.value)}`);
